@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Luckiest Guy', cursive;
+    background: radial-gradient(circle at center, #2d3436 0%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-wrapper {
+    background: linear-gradient(to bottom right, #fd79a8, #ffeaa7, #74b9ff);
+    padding: 50px 30px;
+    border-radius: 30px;
+    border: 10px double #fff;
+    box-shadow:
+        0 0 30px #ffeaa7,
+        0 0 60px #fd79a8,
+        0 0 90px #a29bfe,
+        inset 0 0 15px #dfe6e9;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: glowbox 3s infinite alternate;
+}
+
+@keyframes glowbox {
+    0% {
+        box-shadow: 0 0 20px #fd79a8, 0 0 40px #ffeaa7, 0 0 60px #a29bfe;
+    }
+    100% {
+        box-shadow: 0 0 30px #ffeaa7, 0 0 60px #fd79a8, 0 0 90px #6c5ce7;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fdff00;
+    text-shadow: 0 0 10px #fdff00, 0 0 20px #fdff00, 0 0 30px #ff6b81;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ffeaa7;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #74b9ff;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    border: 4px solid #fdff00;
+    outline: none;
+    background: #dfe6e9;
+    color: #2d3436;
+    box-shadow: 0 0 10px #ffeaa7 inset;
+    text-align: center;
+}
+
+.input-group input:focus {
+    border-color: #ff6b81;
+    box-shadow: 0 0 15px #fd79a8 inset;
+}
+
+.input-group label {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 1rem;
+    color: #fab1a0;
+    text-shadow: 0 0 5px #fd79a8;
+}
+
+.tombol-hitung {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to right, #00cec9, #81ecec);
+    color: #2d3436;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #00cec9, 0 0 20px #00cec9;
+    transition: all 0.3s ease;
+}
+
+.tombol-hitung:hover {
+    background: linear-gradient(to right, #00cec9, #55efc4);
+    box-shadow: 0 0 20px #00cec9, 0 0 40px #81ecec;
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 2rem;
+    color: #00ffcc;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00ffcc, inset 0 0 10px #6c5ce7;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Efek lampu kelap-kelip di pojok */
+.app-wrapper::before,
+.app-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    animation: lampu 1s infinite alternate;
+    box-shadow: 0 0 10px #ffeaa7;
+}
+
+.app-wrapper::before {
+    top: -15px;
+    left: -15px;
+    background: #ffeaa7;
+}
+
+.app-wrapper::after {
+    bottom: -15px;
+    right: -15px;
+    background: #55efc4;
+}
+
+@keyframes lampu {
+    0% {
+        box-shadow: 0 0 5px #ffeaa7;
+        opacity: 0.7;
+    }
+    100% {
+        box-shadow: 0 0 20px #fd79a8;
+        opacity: 1;
+    }
+}
